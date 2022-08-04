@@ -1,3 +1,3 @@
-# message_queue_example
+# message queue example
 
 test

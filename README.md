@@ -15,44 +15,44 @@ output :
 
 parent simulator creates 3 children <br />
 parent simulator sends 10 to each child <br />
-child simulator 1 picks a message {task:0, content: job 0}
-child simulator 2 picks a message {task:0, content: job 0}
-child simulator 2 picks a message {task:1, content: job 1}
-child simulator 0 picks a message {task:0, content: job 0}
-child simulator 0 picks a message {task:1, content: job 1}
-child simulator 0 picks a message {task:2, content: job 2}
-child simulator 1 picks a message {task:1, content: job 1}
-child simulator 1 picks a message {task:2, content: job 2}
-child simulator 1 picks a message {task:3, content: job 3}
-child simulator 0 picks a message {task:3, content: job 3}
-child simulator 1 picks a message {task:4, content: job 4}
-child simulator 2 picks a message {task:2, content: job 2}
-child simulator 2 picks a message {task:3, content: job 3}
-child simulator 2 picks a message {task:4, content: job 4}
-child simulator 0 picks a message {task:4, content: job 4}
-child simulator 0 picks a message {task:5, content: job 5}
-child simulator 0 picks a message {task:6, content: job 6}
-child simulator 2 picks a message {task:5, content: job 5}
-child simulator 1 picks a message {task:5, content: job 5}
-child simulator 1 picks a message {task:6, content: job 6}
-child simulator 1 picks a message {task:7, content: job 7}
-child simulator 0 picks a message {task:7, content: job 7}
-child simulator 1 picks a message {task:8, content: job 8}
-child simulator 2 picks a message {task:6, content: job 6}
-child simulator 2 picks a message {task:7, content: job 7}
-child simulator 2 picks a message {task:8, content: job 8}
-child simulator 0 picks a message {task:8, content: job 8}
-child simulator 0 picks a message {task:9, content: job 9}
-child simulator 0 picks a message {task:-1, content: ending}
-child simulator 0 exits
-remove message queue message_queue_0
-child simulator 1 picks a message {task:9, content: job 9}
-child simulator 1 picks a message {task:-1, content: ending}
-child simulator 1 exits
-remove message queue message_queue_1
-child simulator 2 picks a message {task:9, content: job 9}
-child simulator 2 picks a message {task:-1, content: ending}
-child simulator 2 exits
-remove message queue message_queue_2
-parent simulator exits
+child simulator 1 picks a message {task:0, content: job 0}<br />
+child simulator 2 picks a message {task:0, content: job 0}<br />
+child simulator 2 picks a message {task:1, content: job 1}<br />
+child simulator 0 picks a message {task:0, content: job 0}<br />
+child simulator 0 picks a message {task:1, content: job 1}<br />
+child simulator 0 picks a message {task:2, content: job 2}<br />
+child simulator 1 picks a message {task:1, content: job 1}<br />
+child simulator 1 picks a message {task:2, content: job 2}<br />
+child simulator 1 picks a message {task:3, content: job 3}<br />
+child simulator 0 picks a message {task:3, content: job 3}<br />
+child simulator 1 picks a message {task:4, content: job 4}<br />
+child simulator 2 picks a message {task:2, content: job 2}<br />
+child simulator 2 picks a message {task:3, content: job 3}<br />
+child simulator 2 picks a message {task:4, content: job 4}<br />
+child simulator 0 picks a message {task:4, content: job 4}<br />
+child simulator 0 picks a message {task:5, content: job 5}<br />
+child simulator 0 picks a message {task:6, content: job 6}<br />
+child simulator 2 picks a message {task:5, content: job 5}<br />
+child simulator 1 picks a message {task:5, content: job 5}<br />
+child simulator 1 picks a message {task:6, content: job 6}<br />
+child simulator 1 picks a message {task:7, content: job 7}<br />
+child simulator 0 picks a message {task:7, content: job 7}<br />
+child simulator 1 picks a message {task:8, content: job 8}<br />
+child simulator 2 picks a message {task:6, content: job 6}<br />
+child simulator 2 picks a message {task:7, content: job 7}<br />
+child simulator 2 picks a message {task:8, content: job 8}<br />
+child simulator 0 picks a message {task:8, content: job 8}<br />
+child simulator 0 picks a message {task:9, content: job 9}<br />
+child simulator 0 picks a message {task:-1, content: ending}<br />
+child simulator 0 exits<br />
+remove message queue message_queue_0<br />
+child simulator 1 picks a message {task:9, content: job 9}<br />
+child simulator 1 picks a message {task:-1, content: ending}<br />
+child simulator 1 exits<br />
+remove message queue message_queue_1<br />
+child simulator 2 picks a message {task:9, content: job 9}<br />
+child simulator 2 picks a message {task:-1, content: ending}<br />
+child simulator 2 exits<br />
+remove message queue message_queue_2<br />
+parent simulator exits<br />
 

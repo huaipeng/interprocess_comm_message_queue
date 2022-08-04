@@ -13,8 +13,8 @@ type the following command in a terminal :
 
 output :
 
-parent simulator creates 3 children 
-parent simulator sends 10 to each child 
+parent simulator creates 3 children <br />
+parent simulator sends 10 to each child <br />
 child simulator 1 picks a message {task:0, content: job 0}
 child simulator 2 picks a message {task:0, content: job 0}
 child simulator 2 picks a message {task:1, content: job 1}

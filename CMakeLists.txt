@@ -8,14 +8,14 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 
-find_package(Boost 1.6.0 REQUIRED COMPONENTS date_time filesystem system iostreams serialization)
+find_package(Boost 1.6.0 REQUIRED COMPONENTS filesystem system iostreams serialization)
 include_directories(${Boost_INCLUDE_DIRS})
 
  
 # Set directory for Source files
-file(GLOB SOURCES "src/*.cpp" )
+file(GLOB SOURCES "*.cpp" )
 
-include_directories(src/)
+include_directories(./)
 
 # Add executable file
 add_executable(test_boost_message_queue ${SOURCES})

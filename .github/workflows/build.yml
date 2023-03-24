@@ -20,9 +20,12 @@ jobs:
       - name: Install boost
         run: |
           sudo apt-get install libboost-all-dev
+      - name: Run cmake
+        run: |
+          cmake .
       - name: Run build-wrapper
         run: |
-          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} cmake --build .
+          build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} make
       - name: Run sonar-scanner
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

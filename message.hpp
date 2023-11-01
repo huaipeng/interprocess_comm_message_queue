@@ -3,32 +3,30 @@
 #define message_hpp
 
 #include <stdio.h>
-#include <boost/serialization/string.hpp>
-#include <boost/interprocess/ipc/message_queue.hpp>
+
 #include <boost/archive/text_oarchive.hpp>
+#include <boost/interprocess/ipc/message_queue.hpp>
+#include <boost/serialization/string.hpp>
 #include <map>
 #include <string>
 
 using namespace boost::interprocess;
 using namespace std;
 
-class Message
-{
-public:
-    Message(int i = -1, std::string n = " ending")
-        : type(i), content(n){};
+class Message {
+   public:
+    Message(int i = -1, std::string n = " Nil") : ID(i), content(n){};
 
-    int type;
+    int ID;
     std::string content;
 
-private:
+   private:
     friend class boost::serialization::access;
 
     template <class Archive>
-    void serialize(Archive &ar, const unsigned int version)
-    {
-        ar &type;
-        ar &content;
+    void serialize(Archive& ar, const unsigned int version) {
+        ar& ID;
+        ar& content;
     }
 };
 

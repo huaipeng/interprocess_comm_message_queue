@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.0)
-project (test_boost_message_queue)
+project (message_queue_comm.exe)
 
 # CPP 17
 set(CMAKE_CXX_STANDARD 17)
@@ -18,8 +18,8 @@ file(GLOB SOURCES "*.cpp" )
 include_directories(./)
 
 # Add executable file
-add_executable(test_boost_message_queue ${SOURCES})
-target_link_libraries(test_boost_message_queue ${Boost_LIBRARIES})
+add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
+target_link_libraries(${CMAKE_PROJECT_NAME} ${Boost_LIBRARIES})
 
 
 

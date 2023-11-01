@@ -1,58 +1,60 @@
 # message queue example
 
-first compile the application:
+Here is an example showing how to create a message queue for inter-process communication using the boost library
+
+## First compile the application in the following two steps. The project uses cmake to manage the C++ source code:
 
 1. cmake .
 2. make
 
-after the compilation, an executable file 'test_boost_message_queue' will be generated. then start to test the communication via message queues
+After compilation, the executable file "message_queue_comm.exe" will be generated. Then start testing the communication through the message queue
 
-type the following command in a terminal :
+## Run the executable file in the terminal:
 
-./test_boost_message_queue
+./message_queue_comm.exe
 
-output :
+Output :
 
-parent simulator creates 3 children <br />
-parent simulator sends 10 to each child <br />
-child simulator 1 picks a message {task:0, content: job 0}<br />
-child simulator 2 picks a message {task:0, content: job 0}<br />
-child simulator 2 picks a message {task:1, content: job 1}<br />
-child simulator 0 picks a message {task:0, content: job 0}<br />
-child simulator 0 picks a message {task:1, content: job 1}<br />
-child simulator 0 picks a message {task:2, content: job 2}<br />
-child simulator 1 picks a message {task:1, content: job 1}<br />
-child simulator 1 picks a message {task:2, content: job 2}<br />
-child simulator 1 picks a message {task:3, content: job 3}<br />
-child simulator 0 picks a message {task:3, content: job 3}<br />
-child simulator 1 picks a message {task:4, content: job 4}<br />
-child simulator 2 picks a message {task:2, content: job 2}<br />
-child simulator 2 picks a message {task:3, content: job 3}<br />
-child simulator 2 picks a message {task:4, content: job 4}<br />
-child simulator 0 picks a message {task:4, content: job 4}<br />
-child simulator 0 picks a message {task:5, content: job 5}<br />
-child simulator 0 picks a message {task:6, content: job 6}<br />
-child simulator 2 picks a message {task:5, content: job 5}<br />
-child simulator 1 picks a message {task:5, content: job 5}<br />
-child simulator 1 picks a message {task:6, content: job 6}<br />
-child simulator 1 picks a message {task:7, content: job 7}<br />
-child simulator 0 picks a message {task:7, content: job 7}<br />
-child simulator 1 picks a message {task:8, content: job 8}<br />
-child simulator 2 picks a message {task:6, content: job 6}<br />
-child simulator 2 picks a message {task:7, content: job 7}<br />
-child simulator 2 picks a message {task:8, content: job 8}<br />
-child simulator 0 picks a message {task:8, content: job 8}<br />
-child simulator 0 picks a message {task:9, content: job 9}<br />
-child simulator 0 picks a message {task:-1, content: ending}<br />
-child simulator 0 exits<br />
-remove message queue message_queue_0<br />
-child simulator 1 picks a message {task:9, content: job 9}<br />
-child simulator 1 picks a message {task:-1, content: ending}<br />
-child simulator 1 exits<br />
-remove message queue message_queue_1<br />
-child simulator 2 picks a message {task:9, content: job 9}<br />
-child simulator 2 picks a message {task:-1, content: ending}<br />
-child simulator 2 exits<br />
-remove message queue message_queue_2<br />
-parent simulator exits<br />
+The parent process creates 3 child processes with different IDs. <br />
+The parent process sends 10 messages to each child process. <br />
+Child process 2 receives a message: {Msg Id:0, Msg Content: Job 0}<br />
+Child process 1 receives a message: {Msg Id:0, Msg Content: Job 0}<br />
+Child process 1 receives a message: {Msg Id:1, Msg Content: Job 1}<br />
+Child process 2 receives a message: {Msg Id:1, Msg Content: Job 1}<br />
+Child process 2 receives a message: {Msg Id:2, Msg Content: Job 2}<br />
+Child process 1 receives a message: {Msg Id:2, Msg Content: Job 2}<br />
+Child process 2 receives a message: {Msg Id:3, Msg Content: Job 3}<br />
+Child process 1 receives a message: {Msg Id:3, Msg Content: Job 3}<br />
+Child process 0 receives a message: {Msg Id:0, Msg Content: Job 0}<br />
+Child process 2 receives a message: {Msg Id:4, Msg Content: Job 4}<br />
+Child process 1 receives a message: {Msg Id:4, Msg Content: Job 4}<br />
+Child process 2 receives a message: {Msg Id:5, Msg Content: Job 5}<br />
+Child process 0 receives a message: {Msg Id:1, Msg Content: Job 1}<br />
+Child process 1 receives a message: {Msg Id:5, Msg Content: Job 5}<br />
+Child process 2 receives a message: {Msg Id:6, Msg Content: Job 6}<br />
+Child process 0 receives a message: {Msg Id:2, Msg Content: Job 2}<br />
+Child process 2 receives a message: {Msg Id:7, Msg Content: Job 7}<br />
+Child process 1 receives a message: {Msg Id:6, Msg Content: Job 6}<br />
+Child process 0 receives a message: {Msg Id:3, Msg Content: Job 3}<br />
+Child process 2 receives a message: {Msg Id:8, Msg Content: Job 8}<br />
+Child process 1 receives a message: {Msg Id:7, Msg Content: Job 7}<br />
+Child process 0 receives a message: {Msg Id:4, Msg Content: Job 4}<br />
+Child process 2 receives a message: {Msg Id:9, Msg Content: Job 9}<br />
+Child process 1 receives a message: {Msg Id:8, Msg Content: Job 8}<br />
+Child process 0 receives a message: {Msg Id:5, Msg Content: Job 5}<br />
+Child process 2 receives a message: {Msg Id:-1, Msg Content: Nil}<br />
+Child process 2 exits<br />
+Child process 1 receives a message: {Msg Id:9, Msg Content: Job 9}<br />
+Child process 0 receives a message: {Msg Id:6, Msg Content: Job 6}<br />
+Child process 1 receives a message: {Msg Id:-1, Msg Content: Nil}<br />
+Child process 0 receives a message: {Msg Id:7, Msg Content: Job 7}<br />
+Child process 1 exits<br />
+Child process 0 receives a message: {Msg Id:8, Msg Content: Job 8}<br />
+Child process 0 receives a message: {Msg Id:9, Msg Content: Job 9}<br />
+Child process 0 receives a message: {Msg Id:-1, Msg Content: Nil}<br />
+Child process 0 exits<br />
+Destroy message queue: message_queue_2<br />
+Destroy message queue: message_queue_1<br />
+Destroy message queue: message_queue_0<br />
+Parent process exits.<br />
 

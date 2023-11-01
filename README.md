@@ -1,4 +1,4 @@
-# message queue example
+# An example of interprocess communication using C++ Message queue
 
 Here is an example showing how to create a message queue for inter-process communication using the boost library
 
